@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #05070b;
+  color: #ffffff;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(0, 240, 255, 0.12), transparent 30%),
+    radial-gradient(circle at 90% 40%, rgba(255, 50, 80, 0.08), transparent 28%),
+    #05070b;
+}
+
+.nav {
+  height: 70px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: #00f0ff;
+}
+
+.coins {
+  padding: 9px 16px;
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  border-radius: 12px;
+  background: rgba(0, 240, 255, 0.08);
+  color: #00f0ff;
+  font-weight: 800;
+}
+
+main {
+  width: min(1100px, 92%);
+  margin: auto;
+}
+
+.hero {
+  text-align: center;
+  padding: 70px 0 50px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  border-radius: 30px;
+  color: #00f0ff;
+  background: rgba(0, 240, 255, 0.08);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+h1 {
+  margin: 25px auto 15px;
+  max-width: 800px;
+  font-size: clamp(42px, 8vw, 78px);
+  line-height: 0.98;
+  letter-spacing: -4px;
+}
+
+h1 span {
+  color: #00f0ff;
+  text-shadow: 0 0 25px rgba(0, 240, 255, 0.6);
+}
+
+.hero > p {
+  max-width: 620px;
+  margin: 0 auto 40px;
+  color: #9aa3ad;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.game-card {
+  position: relative;
+  max-width: 700px;
+  margin: auto;
+  padding: 45px 30px 35px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 28px;
+  background:
+    linear-gradient(rgba(255,255,255,0.02), rgba(255,255,255,0)),
+    #0a0e14;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.round {
+  color: #7d8792;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.multiplier {
+  margin: 25px 0 5px;
+  font-size: clamp(60px, 13vw, 110px);
+  font-weight: 900;
+  color: #00f0ff;
+  text-shadow: 0 0 35px rgba(0, 240, 255, 0.55);
+}
+
+.multiplier.flying {
+  animation: pulse 0.8s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.04);
+  }
+}
+
+.rocket {
+  font-size: 55px;
+  margin: 5px 0 15px;
+  animation: rocket 1.2s infinite ease-in-out;
+}
+
+@keyframes rocket {
+  0%, 100% {
+    transform: translateY(0) rotate(-8deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+}
+
+.status {
+  min-height: 24px;
+  color: #aeb7c2;
+  font-weight: 700;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: end;
+  margin-top: 28px;
+}
+
+.controls > div {
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: #8d98a5;
+  font-size: 12px;
+}
+
+input {
+  width: 130px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  outline: none;
+  background: #111720;
+  color: white;
+}
+
+button {
+  padding: 14px 22px;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #00f0ff;
+  color: #001014;
+  font-weight: 900;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.45);
+}
+
+button.cashout {
+  background: #45e08a;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding: 30px 0 80px;
+}
+
+.features div {
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.features b {
+  font-size: 17px;
+}
+
+.features p {
+  margin-bottom: 0;
+  color: #8f99a5;
+  line-height: 1.5;
+}
+
+footer {
+  padding: 30px 5%;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  color: #737d88;
+  font-size: 12px;
+}
+
+@media (max-width: 650px) {
+  .hero {
+    padding-top: 45px;
+  }
+
+  h1 {
+    letter-spacing: -2px;
+  }
+
+  .game-card {
+    padding: 35px 18px 25px;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .controls > div {
+    text-align: left;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
